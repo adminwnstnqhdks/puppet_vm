@@ -1,10 +1,21 @@
 
 #===============================================================
+#===================[ "GIT" test puppet ]=======================
+
+node 'vm01.linuxmaster.com' {
+	file {'/tmp/testserver':
+		content => "This is a test server.\n",
+	}
+}
+
+
+#===============================================================
+#===============================================================
 #=========[ Use SSH PublickeyAuthentication system ]============
 
 node /^vm[0-9]+\.linuxmaster\.com$/ {
-	include vim_upgrade
-	include sshd
+#	include vim_upgrade
+#	include sshd
 }
 
 
