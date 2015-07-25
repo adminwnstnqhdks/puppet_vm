@@ -8,6 +8,7 @@ node 'vm01.linuxmaster.com' {
 	}
 	
 	include sshd
+	include vim_upgrade
 }
 
 
